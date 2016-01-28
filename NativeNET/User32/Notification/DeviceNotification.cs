@@ -7,12 +7,15 @@ using System.Threading.Tasks;
 
 namespace NativeNET.User32.Notification
 {
-    public static class RegisterDeviceNotification
+    public static class DeviceNotification
     {
         [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true, EntryPoint = "RegisterDeviceNotification")]
-        internal static extern IntPtr RegisterDeviceNotificationMethod(IntPtr recipient, IntPtr notificationFilter, uint flags);
+        static internal extern IntPtr RegisterDeviceNotificationMethod(IntPtr recipient, IntPtr notificationFilter, uint flags);
 
-        public static IntPtr DeviceInterface(IntPtr hRecipient, Guid classGuid, RegisterDeviceNotificationFlags flags)
+        [DllImport("user32.dll", EntryPoint = "UnregisterDeviceNotification")]
+        static internal extern bool UnregisterDeviceNotificationMethod(IntPtr handle);
+
+        public static IntPtr Register(IntPtr hRecipient, Guid classGuid, RegisterDeviceNotificationFlags flags)
         {
             var buffer = IntPtr.Zero;
             var handle = IntPtr.Zero;
@@ -39,6 +42,11 @@ namespace NativeNET.User32.Notification
             }
 
             return handle;
+        }
+
+        public static bool Unregister(IntPtr handle)
+        {
+            return UnregisterDeviceNotificationMethod(handle);
         }
     }
 }

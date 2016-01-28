@@ -39,10 +39,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Hid\Attributes.cs" />
+    <Compile Include="Hid\Capabilities.cs" />
+    <Compile Include="Hid\GetAttributes.cs" />
+    <Compile Include="Hid\GetCapabilities.cs" />
+    <Compile Include="Hid\GetHidGuid.cs" />
+    <Compile Include="Kernel32\File\CancelIoEx.cs" />
+    <Compile Include="Kernel32\File\CreateFile.cs" />
+    <Compile Include="Kernel32\File\CreationDispositionEnum.cs" />
+    <Compile Include="Kernel32\File\DesiredAccessFlags.cs" />
+    <Compile Include="Kernel32\File\FlagsAndAttributes.cs" />
+    <Compile Include="Kernel32\File\SecurityAttributes.cs" />
+    <Compile Include="Kernel32\File\ShareModeFlags.cs" />
+    <Compile Include="Kernel32\File\WriteFile.cs" />
+    <Compile Include="Kernel32\Handle\CloseHandle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SetupApi\Device\DevicePropertyKey.cs" />
+    <Compile Include="SetupApi\Device\EnumDeviceInfo.cs" />
+    <Compile Include="SetupApi\Device\GetClassDevs.cs" />
+    <Compile Include="SetupApi\Device\GetClassDevsFlags.cs" />
+    <Compile Include="SetupApi\Device\GetDeviceInterfaceDetail.cs" />
+    <Compile Include="SetupApi\Device\GetDeviceProperty.cs" />
+    <Compile Include="SetupApi\Device\GetDeviceRegistryProperty.cs" />
+    <Compile Include="SetupApi\Device\DeviceInfoData.cs" />
+    <Compile Include="SetupApi\Device\DeviceInterfaceData.cs" />
+    <Compile Include="SetupApi\Device\DeviceInterfaceDetailData.cs" />
     <Compile Include="User32\Notification\Dbch_DeviceType.cs" />
     <Compile Include="User32\Notification\DevBroadcastDeviceInterfaceStruct.cs" />
-    <Compile Include="User32\Notification\RegisterDeviceNotification.cs" />
+    <Compile Include="User32\Notification\DeviceNotification.cs" />
     <Compile Include="User32\Notification\RegisterDeviceNotificationFlags.cs" />
     <Compile Include="Windows\Messages.cs" />
   </ItemGroup>
