@@ -52,7 +52,7 @@
     <Compile Include="Kernel32\File\FlagsAndAttributes.cs" />
     <Compile Include="Kernel32\File\SecurityAttributes.cs" />
     <Compile Include="Kernel32\File\ShareModeFlags.cs" />
-    <Compile Include="Kernel32\File\WriteFile.cs" />
+    <Compile Include="Kernel32\File\IO.cs" />
     <Compile Include="Kernel32\Handle\CloseHandle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SetupApi\Device\DevicePropertyKey.cs" />
